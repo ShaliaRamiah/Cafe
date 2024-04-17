@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Seams, Leaves & Beans</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", monospace;
+}
+body {
+    background-image: url("back.png");
+    background-color: #b19c84;
+} 
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("cafehead.png");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+.image-container {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.menu-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.menu-item-text {
+  flex: 1;
+}
+.menu-item-image {
+  flex: 1;
+  padding: 0 20px;
+}
+.menu-item-price {
+  flex: 1;
+  text-align: right;
+}
+</style>
+<style>
+  body {
+    background-image: url("back.png");
+    background-repeat: no-repeat;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">CONTACT</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 6am to 5pm</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-large">
+    
+  <hr style="height:3px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0)">
+
+  <!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h3>
+    <p style="font-size: 20px">Seams, Leaves & Beans is a small to medium library café situated in Johannesburg, Newtown, opened in 2016. Library cafes are an ideal environment for studying. We serve coffee, tea and snacks. Snacks consist  of pastries, muffins, sandwiches, and salads; they range from finger foods to complete meals and are quick and convenient to consume. You will undoubtedly enjoy sipping your preferred beverages while reading your favourite novels. 
+    </p>
+    <div style="text-align: center;">
+        <img src="pexels-photo-683039.jpeg" style="width:350px" class="w3-circle" alt="kitchen">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h3>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="eatLink">
+        <div class="w3-col s6 tablink" style="font-size: 18px;">Food and treats</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');" id="drinksLink">
+        <div class="w3-col s6 tablink" style="font-size: 18px;">Drinks</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <center>
+        <div class="menu-item">
+          <div class="menu-item-text">
+            <h4>Blueberry Muffin</h4>
+            <p class="w3-text-grey">Freshly baked blueberry muffin</p>
+          </div>
+          <div class="menu-item-image">
+            <div class="image-container">
+              <img src="blueberrymuffin.jpg" class="menu-image" alt="Blueberry Muffin">
+            </div>
+          </div>
+          <div class="menu-item-price">
+            R12.00
+          </div>
+        </div>
+        <!-- Repeat for other food items -->
+        <div class="menu-item">
+          <div class="menu-item-text">
+            <h4>Chocolate Muffin</h4>
+            <p class="w3-text-grey">Freshly baked chocolate muffin</p>
+          </div>
+          <div class="menu-item-image">
+            <div class="image-container">
+              <img src="chocolatemuffin.jpg" class="menu-image" alt="Chocolate Muffin">
+            </div>
+          </div>
+          <div class="menu-item-price">
+            R12.00
+          </div>
+        </div>
+        <!-- Repeat for other food items -->
+        <div class="menu-item">
+          <div class="menu-item-text">
+            <h4>Carrot Cake</h4>
+            <p class="w3-text-grey">Sliced carrot cake with 3 layers</p>
+          </div>
+          <div class="menu-item-image">
+            <div class="image-container">
+              <img src="carrotcake.jpg" class="menu-image" alt="Carrot Cake">
+            </div>
+          </div>
+          <div class="menu-item-price">
+            R13.50
+          </div>
+        </div>
+        <!-- Repeat for other food items -->
+        <div class="menu-item">
+          <div class="menu-item-text">
+            <h4>Black Forest Cake</h4>
+            <p class="w3-text-grey">Sliced black forest cake ready to be served</p>
+          </div>
+          <div class="menu-item-image">
+            <div class="image-container">
+              <img src="blackforestcake.jpg" class="menu-image" alt="Black Forest Cake">
+            </div>
+          </div>
+          <div class="menu-item-price">
+            R14.00
+          </div>
+        </div>
+        <!-- Repeat for other food items -->
+        <div class="menu-item">
+          <div class="menu-item-text">
+            <h4>Chocolate Moose Cake</h4>
+            <p class="w3-text-grey">Mouth watering cake with chocolate moose on top</p>
+          </div>
+          <div class="menu-item-image">
+            <div class="image-container">
+              <img src="chocolatemoosecake.jpg" class="menu-image" alt="Chocolate Moose Cake">
+            </div>
+          </div>
+          <div class="menu-item-price">
+            R14.50
+          </div>
+        </div>
+        <!-- Repeat for other food items -->
+      </center>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <center>
+        <div class="menu-item">
+          <div class="menu-item-text">
+            <h4>Iced Latte</h4>
+            <p class="w3-text-grey">Regular coffee</p>
+          </div>
+          <div class="menu-item-image">
+            <div class="image-container">
+              <img src="icedlatte.jpg" class="menu-image" alt="Iced Latte">
+            </div>
+          </div>
+          <div class="menu-item-price">
+            R12.50
+          </div>
+        </div>
+        <!-- Repeat for other drink items -->
+        <div class="menu-item">
+          <div class="menu-item-text">
+            <h4>Hot Americano</h4>
+            <p class="w3-text-grey">Chocolate espresso with milk</p>
+          </div>
+          <div class="menu-item-image">
+            <div class="image-container">
+              <img src="hotamericano.jpg" class="menu-image" alt="Hot Americano">
+            </div>
+          </div>
+          <div class="menu-item-price">
+            R14.50
+          </div>
+        </div>
+        <!-- Repeat for other drink items -->
+        <div class="menu-item">
+          <div class="menu-item-text">
+            <h4>Hot Latte</h4>
+            <p class="w3-text-grey">Whiskey and coffee</p>
+          </div>
+          <div class="menu-item-image">
+            <div class="image-container">
+              <img src="hotlatte.jpg" class="menu-image" alt="Hot Latte">
+            </div>
+          </div>
+          <div class="menu-item-price">
+            R15.00
+          </div>
+        </div>
+        <!-- Repeat for other drink items -->
+        <div class="menu-item">
+          <div class="menu-item-text">
+            <h4>Iced Americano</h4>
+            <p class="w3-text-grey">Hot americano, except not hot</p>
+          </div>
+          <div class="menu-item-image">
+            <div class="image-container">
+              <img src="icedamericano.jpg" class="menu-image" alt="Iced Americano">
+            </div>
+          </div>
+          <div class="menu-item-price">
+            R13.00
+          </div>
+        </div>
+        <!-- Repeat for other drink items -->
+      </center>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-center" id="where" style="padding-bottom:32px; margin-bottom: 64px;">
+  <div class="w3-content" style="max-width:700px">
+    <h3 class="w3-padding-48"><span class="w3-tag w3-wide">How to contact us</span></h3>
+    <div class="w3-row-padding">
+      <div class="w3-col s12">
+        <h4>Contact number:</h4>
+        <p>+27 833467890</p>
+      </div>
+      <div class="w3-col s12">
+        <h4>Telephone number:</h4>
+        <p>(083) 346-7890</p>
+      </div>
+      <div class="w3-col s12">
+        <h4>Email address:</h4>
+        <p>seamsleaves&beans@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Thanks for visiting Seams, Leaves & Beans!</p>
+</footer>
+
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("eatLink").click();
+</script>
+
+</body>
+</html>
